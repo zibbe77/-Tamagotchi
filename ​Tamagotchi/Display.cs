@@ -17,9 +17,10 @@ public class Display
     }
     public static void Do()
     {
-        string text = " Mata | nytt ord | Lek | Ignorera ";
+        string text = " Mata | Nytt ord | Lek | Ignorera ";
         Line(text);
         string input = Console.ReadLine();
+        Console.Clear();
         logic.CheckInput(input);
     }
 

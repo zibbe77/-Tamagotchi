@@ -9,20 +9,20 @@ public class logic
         System.Console.WriteLine(input);
         switch (input)
         {
-            case "Mata":
-
+            case "mata":
+                System.Console.WriteLine("fungerar");
                 break;
             case "nytt ord":
 
                 break;
-            case "Lek":
+            case "lek":
 
                 break;
-            case "Ignorera":
+            case "ignorera":
 
                 break;
             default:
-
+                Display.Do();
                 break;
 
         }
