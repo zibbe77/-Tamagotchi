@@ -3,17 +3,28 @@ using System;
 
 public class logic
 {
-    static void ReduceBoredom()
+    public static void CheckInput(string input)
     {
+        input.ToLower();
+        System.Console.WriteLine(input);
+        switch (input)
+        {
+            case "Mata":
 
-    }
-    static void Tick()
-    {
+                break;
+            case "nytt ord":
 
-    }
-    static void IncresFood()
-    {
+                break;
+            case "Lek":
 
+                break;
+            case "Ignorera":
+
+                break;
+            default:
+
+                break;
+
+        }
     }
-    
 }

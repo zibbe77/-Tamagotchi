@@ -31,9 +31,21 @@ class Tamagotchi
     }
     public void Teach()
     {
-        
+
     }
-    void GetAlive()
+    public void GetAlive()
+    {
+
+    }
+    void ReduceBoredom()
+    {
+
+    }
+    void Tick()
+    {
+
+    }
+    void IncresFood()
     {
 
     }
