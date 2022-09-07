@@ -1,25 +1,36 @@
 using System;
 
 
-public class logic
+public class Logic
 {
+    public static List<Tamagotchi> tamagotchiList = new List<Tamagotchi>();
+    public static int curentTamPerTurn = 0;
+
+    public static void turnControler()
+    {
+        foreach (Tamagotchi t in tamagotchiList)
+        {
+            Display.Do();
+            Console.ReadLine();
+            curentTamPerTurn++;
+        }
+    }
+
     public static void CheckInput(string input)
     {
-        input.ToLower();
-        System.Console.WriteLine(input);
-        switch (input)
+        switch (input.ToLower())
         {
             case "mata":
-                System.Console.WriteLine("fungerar");
+                tamagotchiList[curentTamPerTurn].Feed();
                 break;
             case "nytt ord":
-
+                tamagotchiList[curentTamPerTurn].Teach();
                 break;
             case "lek":
-
+                tamagotchiList[curentTamPerTurn].Hi();
                 break;
             case "ignorera":
-
+                System.Console.WriteLine("=(");
                 break;
             default:
                 Display.Do();
@@ -27,4 +38,5 @@ public class logic
 
         }
     }
+
 }

@@ -2,9 +2,8 @@
 
 Tamagotchi t = new Tamagotchi();
 
-t.Name = "Jeff";
-t.Feed();
+Logic.tamagotchiList.Add(t);
 Display.Start();
-Display.Do();
-Console.ReadLine();
+
+Logic.turnControler();
 

@@ -1,6 +1,6 @@
 using System;
 
-class Tamagotchi
+public class Tamagotchi
 {
 
     private int hunger;
@@ -23,15 +23,17 @@ class Tamagotchi
 
     public void Feed()
     {
-        hunger++;
+        hunger--;
     }
     public void Hi()
     {
-
+        int r = generator.Next();
+        System.Console.WriteLine(words[r]);
     }
     public void Teach()
     {
-
+        //lär nytt ord
+        ReduceBoredom();
     }
     public void GetAlive()
     {
@@ -39,13 +41,9 @@ class Tamagotchi
     }
     void ReduceBoredom()
     {
-
+        boredom--;
     }
     void Tick()
-    {
-
-    }
-    void IncresFood()
     {
 
     }

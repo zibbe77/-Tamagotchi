@@ -3,6 +3,8 @@ using System;
 
 public class Display
 {
+    #region ManyTimes
+
     public static void Line(string text)
     {
         string space = "";
@@ -17,18 +19,27 @@ public class Display
     }
     public static void Do()
     {
+        string intro = "Skriv ordet för att göra det";
+        Line(intro);
         string text = " Mata | Nytt ord | Lek | Ignorera ";
         Line(text);
         string input = Console.ReadLine();
         Console.Clear();
-        logic.CheckInput(input);
+        Logic.CheckInput(input);
     }
+    #endregion
+
+    #region OdeOnes
 
     public static void Start()
     {
         string text = "Välkomen till Tamagotchi";
         Line(text);
+        string intro = "Klicka enter för att forsäta";
+        Line(intro);
         Console.ReadLine();
         Console.Clear();
     }
+    #endregion
+
 }
