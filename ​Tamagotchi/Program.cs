@@ -5,5 +5,8 @@ Tamagotchi t = new Tamagotchi();
 Logic.tamagotchiList.Add(t);
 Display.Start();
 
-Logic.turnControler();
+while (true)
+{
+    Logic.turnControler();
+}
 

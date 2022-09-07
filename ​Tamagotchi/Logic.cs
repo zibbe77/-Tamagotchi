@@ -11,7 +11,9 @@ public class Logic
         foreach (Tamagotchi t in tamagotchiList)
         {
             Display.Do();
+
             Console.ReadLine();
+            Console.Clear();
             curentTamPerTurn++;
         }
     }
