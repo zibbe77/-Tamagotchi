@@ -6,16 +6,23 @@ public class Logic
     public static List<Tamagotchi> tamagotchiList = new List<Tamagotchi>();
     public static int curentTamPerTurn = 0;
 
-    public static void turnControler()
+    public static void TurnControler()
     {
+        curentTamPerTurn = 0;
         foreach (Tamagotchi t in tamagotchiList)
         {
             Display.Do();
+            Display.ShowStats();
 
-            Console.ReadLine();
-            Console.Clear();
             curentTamPerTurn++;
         }
+    }
+
+    public static void CreatTamagotchi()
+    {
+        Tamagotchi t = new Tamagotchi();
+        Logic.tamagotchiList.Add(t);
+
     }
 
     public static void CheckInput(string input)

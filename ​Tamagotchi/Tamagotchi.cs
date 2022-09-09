@@ -2,9 +2,8 @@ using System;
 
 public class Tamagotchi
 {
-
-    private int hunger;
-    private int boredom;
+    public int hunger { get; private set; }
+    public int boredom { get; private set; }
     private List<string> words = new List<string>();
     private bool isalive;
     private Random generator = new Random();
@@ -23,7 +22,7 @@ public class Tamagotchi
 
     public void Feed()
     {
-        hunger--;
+        hunger -= 2;
     }
     public void Hi()
     {
@@ -35,16 +34,17 @@ public class Tamagotchi
         //lär nytt ord
         ReduceBoredom();
     }
-    public void GetAlive()
+    public bool GetAlive()
     {
-
+        return isalive;
     }
     void ReduceBoredom()
     {
-        boredom--;
+        boredom -= 2;
     }
     void Tick()
     {
-
+        hunger++;
+        boredom++;
     }
 }

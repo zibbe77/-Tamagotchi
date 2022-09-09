@@ -1,12 +1,10 @@
 ﻿using System;
 
-Tamagotchi t = new Tamagotchi();
-
-Logic.tamagotchiList.Add(t);
+Logic.CreatTamagotchi();
 Display.Start();
 
 while (true)
 {
-    Logic.turnControler();
+    Logic.TurnControler();
 }
 

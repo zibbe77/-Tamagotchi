@@ -27,6 +27,37 @@ public class Display
         Console.Clear();
         Logic.CheckInput(input);
     }
+
+    public static void ShowStats()
+    {
+        string hunger = " ";
+        string boredom = " ";
+        int boredomCount = Logic.tamagotchiList[Logic.curentTamPerTurn].boredom;
+        int hungerCount = Logic.tamagotchiList[Logic.curentTamPerTurn].hunger;
+
+        string text = "Hunger  |  Boredom";
+        Line(text);
+
+        System.Console.WriteLine("----------------------------------------");
+        for (int i = 0; i < 5; i++)
+        {
+            if (hungerCount >= 0)
+            {
+                hunger = "¤";
+            }
+            if (boredomCount >= 0)
+            {
+                boredom = "¤";
+            }
+
+            System.Console.WriteLine($"|         {hunger}        |         {boredom}         |");
+            hungerCount++;
+            boredomCount++;
+        }
+        System.Console.WriteLine("----------------------------------------");
+        Console.ReadLine();
+        Console.Clear();
+    }
     #endregion
 
     #region OdeOnes
