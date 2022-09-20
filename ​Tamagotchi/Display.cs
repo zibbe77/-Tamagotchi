@@ -33,6 +33,8 @@ public class Display
     }
     public static void Do()
     {
+        string name = $"{Logic.tamagotchiList[Logic.curentTamPerTurn].Name}s tur att göra saker";
+        Line(name);
         string intro = "Skriv ordet för att göra det";
         Line(intro);
         string text = " Mata | Nytt ord | Lek | Ignorera ";
