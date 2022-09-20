@@ -15,7 +15,7 @@ public class Logic
             Display.ShowStats();
             curentTamPerTurn++;
         }
-        tamagotchiList.RemoveAll(t => t.isAlive() == false);
+        tamagotchiList.RemoveAll(t => t.GetAlive() == false);
     }
 
     public static void CreatTamagotchi()
