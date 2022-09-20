@@ -20,6 +20,12 @@ public class Tamagotchi
         }
     }
 
+    public Tamagotchi()
+    {
+        hunger = -4;
+        boredom = -4;
+    }
+
     public void Feed()
     {
         hunger -= 2;
@@ -38,13 +44,22 @@ public class Tamagotchi
     {
         return isalive;
     }
-    void ReduceBoredom()
-    {
-        boredom -= 2;
-    }
-    void Tick()
+    public void Tick()
     {
         hunger++;
         boredom++;
+        if (hunger > 0)
+        {
+            isalive = false;
+        }
+        if (boredom > 0)
+        {
+            isalive = false;
+        }
     }
+    void ReduceBoredom()
+    {
+        boredom -= 3;
+    }
+
 }
