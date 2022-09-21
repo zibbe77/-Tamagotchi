@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+
 public class Logic
 {
     public static List<Tamagotchi> tamagotchiList = new List<Tamagotchi>();
@@ -96,5 +98,12 @@ public class Logic
                 NewTamagotchi();
                 break;
         }
+    }
+    public static string LearnWord()
+    {
+        Random generator = new Random();
+        int r = generator.Next(122312);
+        string word = File.ReadAllLines(@"svenska-ord.txt")[r];
+        return word;
     }
 }

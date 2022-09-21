@@ -4,9 +4,9 @@ public class Tamagotchi
 {
     public int hunger { get; private set; }
     public int boredom { get; private set; }
+    private Random generator = new Random();
     private List<string> words = new List<string>();
     private bool isalive = true;
-    private Random generator = new Random();
     private string name = "";
     public string Name
     {
@@ -46,20 +46,39 @@ public class Tamagotchi
             Name = Console.ReadLine();
             Console.Clear();
         }
+
+        //Skapar 5 ord 
+        for (int i = 0; i < 5; i++)
+        {
+            string utput = Logic.LearnWord();
+            words.Add(utput);
+        }
     }
 
     public void Feed()
     {
         hunger -= 2;
     }
+
     public void Hi()
     {
-        int r = generator.Next();
-        System.Console.WriteLine(words[r]);
+        //skriver utt ett ord från words 
+        int r = generator.Next(words.Count);
+        string text = $"din {name} sägger {words[r]}";
+        Display.Line(text);
+
+        ReduceBoredom();
     }
+
     public void Teach()
     {
-        //lär nytt ord
+        //generarar ett ord från listan sedan 
+        string utput = Logic.LearnWord();
+        words.Add(utput);
+
+        string text = $"din {name} lärde sig {utput}";
+        Display.Line(text);
+
         ReduceBoredom();
     }
     public bool GetAlive()
