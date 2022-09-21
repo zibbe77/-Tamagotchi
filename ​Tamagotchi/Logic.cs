@@ -36,6 +36,8 @@ public class Logic
         {
             string text = "vill du göra en ny Tamagotchi";
             Display.Line(text);
+            string text1 = "skriv ja eller nej";
+            Display.Line(text1);
             string input = Console.ReadLine();
 
             //kolar input för svar 
@@ -85,10 +87,10 @@ public class Logic
     {
         switch (input.ToLower())
         {
-            case "yes":
+            case "ja":
                 CreatTamagotchi();
                 break;
-            case "no":
+            case "nej":
                 string text = "no more okej =(";
                 Display.Line(text);
                 break;
@@ -98,6 +100,9 @@ public class Logic
                 NewTamagotchi();
                 break;
         }
+        string text3 = "klicka enter för att forsäta";
+        Display.Line(text3);
+        Console.ReadLine();
     }
     public static string LearnWord()
     {
