@@ -89,6 +89,15 @@ public class Display
         Console.ReadLine();
         Console.Clear();
     }
+
+    public static void End()
+    {
+        string text = "hej då, du förlorade =)";
+        Display.Line(text);
+        Console.ReadLine();
+
+        string text2 = "klicka enter för att avsluta";
+    }
     #endregion
 
 }

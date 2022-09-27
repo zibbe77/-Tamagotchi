@@ -3,7 +3,9 @@
 Display.Start();
 Logic.CreatTamagotchi();
 
-while (true)
+while (Logic.tamagotchiList.Count > 0)
 {
     Logic.TurnControler();
 }
+
+Display.End();
